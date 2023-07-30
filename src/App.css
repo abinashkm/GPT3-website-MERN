@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color-bg);
+}
+
+a{
+    color:unset;
+    text-decoration: none;
+}
+
+
+/*now this is written to give a gradient look and the code is gennerated using angrytool.com*/
+.gradient__bg{
+    
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+        
+.gradient__text {
+    background: linear-gradient(90deg, rgba(238, 130, 238, 1) 0%, rgba(0, 0, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* we have created this two so that we could apply same padding and margin too all the sections or section wise by calling it through*/
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}
+
+
+/*now to create custom css animation we could use a website known as https://animista.net/ */
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+
+/*so to be supported by every screen sized device we will be using this*/
+
+@media screen and (max-width:700px){
+    
+    .section__padding {
+
+        padding: 4rem ;
+    }
+    .section__margin {
+        margin: 4rem ;
+    }
+}
+
+@media screen and (max-width:500px){
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+    .section__margin {
+        margin: 4rem 2rem;
+    }
+}
